@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>My Todo's</h1>
+    <table class="table">
+        
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Target Date</th>
+                <th>Is Completed?</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.targetDate | date}}</td>
+                <td *ngIf="!todo.status">No</td>
+                <td *ngIf="todo.status">Yes</td>
+                <td><button class="btn btn-primary" routerLink="/modifytodo">Update</button></td>
+                <td><button class="btn btn-danger" (click)="deleteTodos()">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-lg btn-block btn-success" routerLink="/createtodo">Create a new Todo</button>
+</div>

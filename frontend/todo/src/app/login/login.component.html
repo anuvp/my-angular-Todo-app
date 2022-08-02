@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<div class="container pl-5">
+    <p class="alert alert-warning" *ngIf='loginFail'>{{errorMessage}}</p>
+
+    Username : <input type="textbox" name="username" [(ngModel)]="uname">
+
+    Password : <input type="textbox" name="password" [(ngModel)]="passwd">
+
+
+
+    <button class="btn btn-outline-primary bg-dark ml-2" name="button" type="submit"
+        (click)="handleLogin()">Login</button>
+</div>
