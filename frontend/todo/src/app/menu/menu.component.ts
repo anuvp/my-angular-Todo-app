@@ -7,11 +7,10 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
- // loggedInUser : boolean = false;
   constructor(public hauthService: HardcodedAuthenticationService) { }
   
   ngOnInit(): void {
-   // this.loggedInUser = this.hauthService.checkForUserLoggedIn();
+   
   }
 
 }
